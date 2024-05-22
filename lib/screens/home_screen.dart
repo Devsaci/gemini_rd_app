@@ -12,6 +12,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // Page Controller
+  final PageController _pageController = PageController();
   // list of screens
   final List<Widget> _screens = [
     const ChatHistoryScreen(),
