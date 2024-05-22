@@ -19,6 +19,7 @@ dependencies:
   flutter_markdown: ^0.6.21
   uuid: ^4.3.3
   provider: ^6.1.2
+  path_provider: ^2.1.2
 
 
 
