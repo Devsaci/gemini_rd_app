@@ -40,7 +40,10 @@ class _HomeScreenState extends State<HomeScreen> {
           setState(() {
             _currentIndex = index;
           });
-          _pageController.jumpToPage(index);
+          //_pageController.jumpToPage(index);
+          _pageController.animateToPage(index,
+              duration: const Duration(milliseconds: 300),
+              curve: Curves.easeInOut);
         },
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chats'),
