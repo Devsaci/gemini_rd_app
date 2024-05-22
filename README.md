@@ -1,16 +1,17 @@
 # gemini_rd_app
 
-A new Flutter project.
+Flutter, Google Gemini Chat Bot with Hive Local Storage: Build a Persistent AI App
 
-## Getting Started
+Master AI conversations and persistent chat history in your Flutter app with Google Gemini and Hive!
 
-This project is a starting point for a Flutter application.
+Build a Flutter App with Gemini: Integrate Google's AI for powerful chat conversations.
 
-A few resources to get you started if this is your first Flutter project:
+Local Chat History: Implement Flutter Hive for saving and retrieving past
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Light & Dark Modes: Create a user-friendly app with a light and dark theme toggle.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Gemini Models: Master both Gemini-Pro and Gemini-Pro-Vision for advanced AI interaction.
+
+Generate Your API Key: Learn the process for obtaining a Google API key for Gemini access.
+
+<https://github.com/Devsaci/gemini_rd_app.git>
