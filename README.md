@@ -16,3 +16,5 @@ Generate Your API Key: Learn the process for obtaining a Google API key for Gemi
 
 <https://github.com/Devsaci/gemini_rd_app.git>
 <https://github.com/Dexterfury/flutter_gemini/blob/main/pubspec.yaml>
+
+3.Home screen UI and Hive boxes
