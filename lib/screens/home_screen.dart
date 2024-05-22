@@ -42,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
           });
           //_pageController.jumpToPage(index);
           _pageController.animateToPage(index,
-              duration: const Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 900),
               curve: Curves.easeInOut);
         },
         items: const [
