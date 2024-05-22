@@ -35,9 +35,10 @@ class _HomeScreenState extends State<HomeScreen> {
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color.fromARGB(255, 250, 223, 203),
+        backgroundColor: Colors.white30,
         currentIndex: _currentIndex,
-        elevation: 50,
+        elevation: 4,
+        selectedItemColor: Theme.of(context).colorScheme.primary,
         onTap: (index) {
           setState(() {
             _currentIndex = index;
