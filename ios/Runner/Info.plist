@@ -5,6 +5,8 @@
 
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This is required to access your photos</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This is required to access your Camera</string>
 
 
 
