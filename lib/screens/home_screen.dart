@@ -18,10 +18,17 @@ class _HomeScreenState extends State<HomeScreen> {
     const ChatScreen(),
     const ProfileScreen(),
   ];
+
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
+        onPageChanged: (value) {
+          setState(() {
+            _currentIndex = value;
+          });
+        },
         children: _screens,
       ),
     );
