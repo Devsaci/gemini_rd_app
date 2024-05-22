@@ -24,9 +24,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView(
-        onPageChanged: (value) {
+        onPageChanged: (index) {
           setState(() {
-            _currentIndex = value;
+            _currentIndex = index;
           });
         },
         children: _screens,
