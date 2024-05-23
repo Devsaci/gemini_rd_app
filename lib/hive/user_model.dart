@@ -5,7 +5,11 @@ class UserModel {
   @HiveField(0)
   final String uid;
 
+  @HiveField(1)
+  final String name;
+
   UserModel({
     required this.uid,
+    required this.name,
   });
 }
