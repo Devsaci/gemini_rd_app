@@ -1,7 +1,7 @@
+import 'package:gemini_rd_app/hive/chat_history.dart';
+import 'package:gemini_rd_app/hive/settings.dart';
+import 'package:gemini_rd_app/hive/user_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
-import 'chat_history.dart';
-import 'user_model.dart';
 
 class Boxes {
   // get the caht history box
@@ -10,4 +10,7 @@ class Boxes {
 
   // get user box
   static Box<UserModel> getUser() => Hive.box<UserModel>('user');
+
+  // get settings box
+  static Box<Settings> getSettings() => Hive.box<Settings>('settings');
 }
