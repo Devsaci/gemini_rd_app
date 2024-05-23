@@ -11,9 +11,13 @@ class ChatHistory {
   @HiveField(2)
   final String response;
 
+  @HiveField(3)
+  final List<String> imagesUrls;
+
   ChatHistory({
     required this.chatId,
     required this.prompt,
     required this.response,
+    required this.imagesUrls,
   });
 }
