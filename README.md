@@ -18,3 +18,4 @@ Generate Your API Key: Learn the process for obtaining a Google API key for Gemi
 <https://github.com/Dexterfury/flutter_gemini/blob/main/pubspec.yaml>
 
 3.Home screen UI and Hive boxes
+in terminal command  : dart run build_runner build
