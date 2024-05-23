@@ -8,8 +8,12 @@ class UserModel {
   @HiveField(1)
   final String name;
 
+  @HiveField(2)
+  final String image;
+
   UserModel({
     required this.uid,
     required this.name,
+    required this.image,
   });
 }
