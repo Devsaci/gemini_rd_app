@@ -5,5 +5,11 @@ class ChatHistory {
   @HiveField(0)
   final String chatId;
 
-  ChatHistory({required this.chatId});
+  @HiveField(1)
+  final String prompt;
+
+  ChatHistory({
+    required this.chatId,
+    required this.prompt,
+  });
 }
