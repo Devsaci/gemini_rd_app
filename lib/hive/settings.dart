@@ -1,4 +1,16 @@
 import 'package:hive_flutter/hive_flutter.dart';
 
 @HiveType(typeId: 2)
-class Settings extends HiveObject {}
+class Settings extends HiveObject {
+  @HiveField(0)
+  bool isDarkTheme = false;
+
+  @HiveField(1)
+  bool shouldSpeak = false;
+
+// Constructor
+  Settings({
+    required this.isDarkTheme,
+    required this.shouldSpeak,
+  });
+}
