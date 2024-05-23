@@ -1,5 +1,7 @@
 import 'package:hive_flutter/hive_flutter.dart';
 
+//part 'chat_history.g.dart';
+
 @HiveType(typeId: 0)
 class ChatHistory {
   @HiveField(0)
