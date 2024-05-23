@@ -14,10 +14,14 @@ class ChatHistory {
   @HiveField(3)
   final List<String> imagesUrls;
 
+  @HiveField(4)
+  final DateTime timestamp;
+
   ChatHistory({
     required this.chatId,
     required this.prompt,
     required this.response,
     required this.imagesUrls,
+    required this.timestamp,
   });
 }
