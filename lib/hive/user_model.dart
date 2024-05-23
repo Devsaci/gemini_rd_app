@@ -1,7 +1,7 @@
 import 'package:hive_flutter/hive_flutter.dart';
 
 @HiveType(typeId: 1)
-class UserModel {
+class UserModel extends HiveObject {
   @HiveField(0)
   final String uid;
 
