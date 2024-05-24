@@ -10,6 +10,6 @@ class ChatProvider extends ChangeNotifier {
     Hive.init(dir.path);
     await Hive.initFlutter(Constants.geminiDB);
 
-    //await Hive.initFlutter();
+    //REGISTER ADAPTERS
   }
 }
