@@ -13,5 +13,6 @@ class Boxes {
   static Box<UserModel> getUser() => Hive.box<UserModel>(Constants.userBox);
 
   // get settings box
-  static Box<Settings> getSettings() => Hive.box<Settings>('settings');
+  static Box<Settings> getSettings() =>
+      Hive.box<Settings>(Constants.settingsBox);
 }
