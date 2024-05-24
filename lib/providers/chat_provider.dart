@@ -7,6 +7,7 @@ class ChatProvider extends ChangeNotifier {
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
     Hive.init(dir.path);
+    await Hive.initFlutter();
 
     //await Hive.initFlutter();
   }
