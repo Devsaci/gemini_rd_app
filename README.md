@@ -19,3 +19,5 @@ Generate Your API Key: Learn the process for obtaining a Google API key for Gemi
 
 3.Home screen UI and Hive boxes
 in terminal command  : dart run build_runner build
+
+4.Chat Provider Class
