@@ -24,6 +24,8 @@ class ChatProvider extends ChangeNotifier {
       Hive.registerAdapter(UserModelAdapter());
       await Hive.openBox<UserModel>(Constants.userBox);
     }
-    if (!Hive.isAdapterRegistered(2)) {}
+    if (!Hive.isAdapterRegistered(2)) {
+      Hive.registerAdapter(SettingsAdapter());
+    }
   }
 }
