@@ -11,5 +11,6 @@ class ChatProvider extends ChangeNotifier {
     await Hive.initFlutter(Constants.geminiDB);
 
     //REGISTER ADAPTERS
+    if (!Hive.isAdapterRegistered(0)) {}
   }
 }
