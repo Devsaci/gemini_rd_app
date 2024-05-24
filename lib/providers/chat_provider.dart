@@ -26,6 +26,7 @@ class ChatProvider extends ChangeNotifier {
     }
     if (!Hive.isAdapterRegistered(2)) {
       Hive.registerAdapter(SettingsAdapter());
+      await Hive.openBox<Settings>(Constants.settingsBox);
     }
   }
 }
