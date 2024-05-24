@@ -14,6 +14,8 @@ class ChatProvider extends ChangeNotifier {
     //REGISTER ADAPTERS
     if (!Hive.isAdapterRegistered(0)) {
       Hive.registerAdapter(ChatHistoryAdapter());
+
+      // OPEN CHAT HISTORY BOX
     }
   }
 }
