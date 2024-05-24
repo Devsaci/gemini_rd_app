@@ -10,7 +10,7 @@ class Boxes {
       Hive.box<ChatHistory>(Constants.chatHistoryBox);
 
   // get user box
-  static Box<UserModel> getUser() => Hive.box<UserModel>('user');
+  static Box<UserModel> getUser() => Hive.box<UserModel>(Constants.userBox);
 
   // get settings box
   static Box<Settings> getSettings() => Hive.box<Settings>('settings');
