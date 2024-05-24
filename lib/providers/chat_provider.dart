@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gemini_rd_app/constants.dart';
 import 'package:gemini_rd_app/hive/chat_history.dart';
+import 'package:gemini_rd_app/hive/settings.dart';
 import 'package:gemini_rd_app/hive/user_model.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart' as path;
@@ -23,5 +24,6 @@ class ChatProvider extends ChangeNotifier {
       Hive.registerAdapter(UserModelAdapter());
       await Hive.openBox<UserModel>(Constants.userBox);
     }
+    if (!Hive.isAdapterRegistered(2)) {}
   }
 }
