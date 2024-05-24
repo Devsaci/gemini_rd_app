@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:gemini_rd_app/providers/chat_provider.dart';
 import 'package:gemini_rd_app/screens/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await ChatProvider.initHive();
   runApp(const MyApp());
 }
 
