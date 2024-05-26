@@ -34,6 +34,9 @@ class ChatProvider extends ChangeNotifier {
   // initialize vision model
   GenerativeModel? _visionModel;
 
+  // current mode
+  String _modelType = 'gemini-pro';
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
