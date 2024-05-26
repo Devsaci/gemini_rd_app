@@ -67,6 +67,11 @@ class Message {
         other.messageId == messageId &&
         other.timeSent == timeSent;
   }
+
+  @override
+  int get hashCode {
+    return messageId.hashCode;
+  }
 }
 
 enum Role { user, assistant }
