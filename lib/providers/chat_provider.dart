@@ -9,7 +9,10 @@ import 'package:path_provider/path_provider.dart' as path;
 
 class ChatProvider extends ChangeNotifier {
 // list of messages
-  List<Message> messages = [];
+  List<Message> _inChatMessages = [];
+
+  // page controller
+  final PageController _pageController = PageController();
 
   // Init Hive boxe
   static initHive() async {
