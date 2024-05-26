@@ -37,6 +37,9 @@ class ChatProvider extends ChangeNotifier {
   // current mode
   String _modelType = 'gemini-pro';
 
+  // loading bool
+  bool _isLoading = false;
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
