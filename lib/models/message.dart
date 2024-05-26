@@ -4,6 +4,7 @@ class Message {
   Role role;
   StringBuffer message;
   List<String> imagesUrls;
+  DateTime timeSent;
 
   Message({
     required this.messageId,
@@ -11,6 +12,7 @@ class Message {
     required this.role,
     required this.message,
     required this.imagesUrls,
+    required this.timeSent,
   });
 }
 
