@@ -21,3 +21,5 @@ Generate Your API Key: Learn the process for obtaining a Google API key for Gemi
 in terminal command  : dart run build_runner build
 
 4.Chat Provider Class
+
+5.BottomChatField
