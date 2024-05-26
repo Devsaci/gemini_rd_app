@@ -4,6 +4,7 @@ import 'package:gemini_rd_app/hive/chat_history.dart';
 import 'package:gemini_rd_app/hive/settings.dart';
 import 'package:gemini_rd_app/hive/user_model.dart';
 import 'package:gemini_rd_app/models/message.dart';
+import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart' as path;
@@ -23,6 +24,9 @@ class ChatProvider extends ChangeNotifier {
 
   // cuttent chatId
   String _currentChatId = '';
+
+  // initialize generative model
+  GenerativeModel? _model;
 
   // Init Hive boxe
   static initHive() async {
