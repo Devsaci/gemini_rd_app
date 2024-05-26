@@ -17,7 +17,7 @@ class ChatProvider extends ChangeNotifier {
   final PageController _pageController = PageController();
 
   // images Xfile list
-  List<XFile> _imagesFileList = [];
+  List<XFile>? _imagesFileList = [];
 
   // index of the current screen
   int _currentIndex = 0;
