@@ -5,6 +5,7 @@ import 'package:gemini_rd_app/hive/settings.dart';
 import 'package:gemini_rd_app/hive/user_model.dart';
 import 'package:gemini_rd_app/models/message.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart' as path;
 
 class ChatProvider extends ChangeNotifier {
@@ -13,6 +14,9 @@ class ChatProvider extends ChangeNotifier {
 
   // page controller
   final PageController _pageController = PageController();
+
+  // images Xfile list
+  List<XFile> _imagesFileList = [];
 
   // Init Hive boxe
   static initHive() async {
