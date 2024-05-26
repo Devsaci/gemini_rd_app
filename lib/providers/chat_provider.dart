@@ -31,6 +31,9 @@ class ChatProvider extends ChangeNotifier {
   // itialize text model
   GenerativeModel? _textModel;
 
+  // initialize vision model
+  GenerativeModel? _visionModel;
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
