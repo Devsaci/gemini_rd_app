@@ -21,6 +21,9 @@ class ChatProvider extends ChangeNotifier {
   // index of the current screen
   int _currentIndex = 0;
 
+  // cuttent chatId
+  String _currentChatId = '';
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
