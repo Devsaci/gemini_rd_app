@@ -58,6 +58,15 @@ class Message {
       timeSent: timeSent ?? this.timeSent,
     );
   }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is Message &&
+        other.messageId == messageId &&
+        other.timeSent == timeSent;
+  }
 }
 
 enum Role { user, assistant }
