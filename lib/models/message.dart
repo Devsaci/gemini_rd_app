@@ -39,6 +39,25 @@ class Message {
       timeSent: DateTime.parse(map['timeSent']),
     );
   }
+
+// copyWith
+  Message copyWith({
+    String? messageId,
+    String? chatId,
+    Role? role,
+    StringBuffer? message,
+    List<String>? imagesUrls,
+    DateTime? timeSent,
+  }) {
+    return Message(
+      messageId: messageId ?? this.messageId,
+      chatId: chatId ?? this.chatId,
+      role: role ?? this.role,
+      message: message ?? this.message,
+      imagesUrls: imagesUrls ?? this.imagesUrls,
+      timeSent: timeSent ?? this.timeSent,
+    );
+  }
 }
 
 enum Role { user, assistant }
