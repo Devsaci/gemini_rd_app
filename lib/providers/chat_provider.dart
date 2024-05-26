@@ -40,6 +40,17 @@ class ChatProvider extends ChangeNotifier {
   // loading bool
   bool _isLoading = false;
 
+  // getters
+  List<Message> get inChatMessages => _inChatMessages;
+  PageController get pageController => _pageController;
+  int get currentIndex => _currentIndex;
+  String get currentChatId => _currentChatId;
+  GenerativeModel? get model => _model;
+  GenerativeModel? get textModel => _textModel;
+  GenerativeModel? get visionModel => _visionModel;
+  String get modelType => _modelType;
+  bool get isLoading => _isLoading;
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
