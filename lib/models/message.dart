@@ -10,4 +10,4 @@ class Message {
   });
 }
 
-class Role {}
+enum Role { user, assistant }
