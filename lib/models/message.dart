@@ -1,5 +1,7 @@
 class Message {
-  
+  String messageId;
 
-  Message({});
+  Message({
+    required this.messageId,
+  });
 }
