@@ -18,6 +18,9 @@ class ChatProvider extends ChangeNotifier {
   // images Xfile list
   List<XFile> _imagesFileList = [];
 
+  // index of the current screen
+  int _currentIndex = 0;
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
