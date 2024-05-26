@@ -16,4 +16,18 @@ class Message {
   });
 }
 
+// toMap
+Map<String, dynamic> toMap(Message message) {
+  return {
+    'messageId': message.messageId,
+    'chatId': message.chatId,
+    'role': message.role.toString(),
+    'message': message.message.toString(),
+    'imagesUrls': message.imagesUrls,
+    'timeSent': message.timeSent.toString(),
+  };
+}
+
+// fromMap
+
 enum Role { user, assistant }
