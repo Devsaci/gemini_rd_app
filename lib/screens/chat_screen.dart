@@ -20,10 +20,22 @@ class _ChatScreenState extends State<ChatScreen> {
             centerTitle: true,
             title: const Text('Chat with Gemini'),
           ),
-          body: const SafeArea(
+          body: SafeArea(
             child: Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Column(children: []),
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  ListView.builder(
+                    itemCount: chatProvider.inChatMessages.length,
+                    itemBuilder: (context, index) {
+                      final message = chatProvider.inChatMessages[index];
+                      return ListTile(
+                        title: Text(message.message.toString()),
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
           ));
     });
