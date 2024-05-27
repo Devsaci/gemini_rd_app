@@ -14,8 +14,11 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Consumer<ChatProvider>(
         builder: (context, ChatProvider chatProvider, child) {
-      return const Scaffold(
-        body: Center(
+      return Scaffold(
+        appBar: AppBar(
+          title: const Text('Chat with Gemini'),
+        ),
+        body: const Center(
           child: Text("Chat Screen"),
         ),
       );
