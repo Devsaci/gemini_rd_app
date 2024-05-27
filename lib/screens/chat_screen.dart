@@ -37,6 +37,22 @@ class _ChatScreenState extends State<ChatScreen> {
                     },
                   ),
                 ),
+                // Input
+                Row(
+                  children: [
+                    const Expanded(
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Enter message',
+                        ),
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.send),
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
