@@ -16,6 +16,8 @@ class _ChatScreenState extends State<ChatScreen> {
         builder: (context, ChatProvider chatProvider, child) {
       return Scaffold(
         appBar: AppBar(
+          backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+          centerTitle: true,
           title: const Text('Chat with Gemini'),
         ),
         body: const Center(
