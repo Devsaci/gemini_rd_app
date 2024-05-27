@@ -21,8 +21,9 @@ class _ChatScreenState extends State<ChatScreen> {
             title: const Text('Chat with Gemini'),
           ),
           body: const SafeArea(
-            child: Center(
-              child: Text("Chat Screen"),
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Column(children: []),
             ),
           ));
     });
