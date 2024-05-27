@@ -11,6 +11,8 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  // controller for text field
+  final TextEditingController messageController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Consumer<ChatProvider>(
@@ -40,16 +42,19 @@ class _ChatScreenState extends State<ChatScreen> {
                 // Input
                 Row(
                   children: [
-                    const Expanded(
+                    Expanded(
                       child: TextField(
-                        decoration: InputDecoration(
+                        controller: messageController,
+                        decoration: const InputDecoration(
                           hintText: 'Enter message',
                         ),
                       ),
                     ),
                     IconButton(
                       icon: const Icon(Icons.send),
-                      onPressed: () {},
+                      onPressed: () {
+                        //chatProvider.sendMessage();
+                      },
                     ),
                   ],
                 ),
