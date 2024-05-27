@@ -41,15 +41,19 @@ class _ChatScreenState extends State<ChatScreen> {
             child: Column(
               children: [
                 Expanded(
-                  child: ListView.builder(
-                    itemCount: chatProvider.inChatMessages.length,
-                    itemBuilder: (context, index) {
-                      final message = chatProvider.inChatMessages[index];
-                      return ListTile(
-                        title: Text(message.message.toString()),
-                      );
-                    },
-                  ),
+                  child: chatProvider.inChatMessages.isEmpty
+                      ? const Center(
+                          child: Text('No messages yet'),
+                        )
+                      : ListView.builder(
+                          itemCount: chatProvider.inChatMessages.length,
+                          itemBuilder: (context, index) {
+                            final message = chatProvider.inChatMessages[index];
+                            return ListTile(
+                              title: Text(message.message.toString()),
+                            );
+                          },
+                        ),
                 ),
                 // Input
                 Row(
