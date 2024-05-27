@@ -15,15 +15,16 @@ class _ChatScreenState extends State<ChatScreen> {
     return Consumer<ChatProvider>(
         builder: (context, ChatProvider chatProvider, child) {
       return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
-          centerTitle: true,
-          title: const Text('Chat with Gemini'),
-        ),
-        body: const Center(
-          child: Text("Chat Screen"),
-        ),
-      );
+          appBar: AppBar(
+            backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
+            centerTitle: true,
+            title: const Text('Chat with Gemini'),
+          ),
+          body: const SafeArea(
+            child: Center(
+              child: Text("Chat Screen"),
+            ),
+          ));
     });
   }
 }
