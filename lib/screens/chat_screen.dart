@@ -12,7 +12,7 @@ class ChatScreen extends StatefulWidget {
 
 class _ChatScreenState extends State<ChatScreen> {
   // controller for text field
-  final TextEditingController messageController = TextEditingController();
+  final TextEditingController _messageController = TextEditingController();
 
   @override
   void initState() {
@@ -21,7 +21,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   @override
   void dispose() {
-    messageController.dispose();
+    _messageController.dispose();
     super.dispose();
   }
 
@@ -56,7 +56,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   children: [
                     Expanded(
                       child: TextField(
-                        controller: messageController,
+                        controller: _messageController,
                         decoration: const InputDecoration(
                           hintText: 'Enter message',
                         ),
