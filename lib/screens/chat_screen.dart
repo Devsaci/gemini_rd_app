@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:gemini_rd_app/providers/chat_provider.dart';
+import 'package:gemini_rd_app/widgets/bottom_chat_field.dart';
 import 'package:provider/provider.dart';
 
 class ChatScreen extends StatefulWidget {
@@ -53,25 +54,26 @@ class _ChatScreenState extends State<ChatScreen> {
                           },
                         ),
                 ),
-                // Input filed
-                Row(
-                  children: [
-                    Expanded(
-                      child: TextField(
-                        controller: _messageController,
-                        decoration: const InputDecoration(
-                          hintText: 'Enter message',
-                        ),
-                      ),
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.send),
-                      onPressed: () {
-                        //chatProvider.sendMessage();
-                      },
-                    ),
-                  ],
-                ),
+                const BottomChatField()
+                // // Input filed
+                // Row(
+                //   children: [
+                //     Expanded(
+                //       child: TextField(
+                //         controller: _messageController,
+                //         decoration: const InputDecoration(
+                //           hintText: 'Enter message',
+                //         ),
+                //       ),
+                //     ),
+                //     IconButton(
+                //       icon: const Icon(Icons.send),
+                //       onPressed: () {
+                //         //chatProvider.sendMessage();
+                //       },
+                //     ),
+                //   ],
+                // ),
               ],
             ),
           ),
