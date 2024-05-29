@@ -25,7 +25,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
         children: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.emoji_emotions),
+            icon: const Icon(Icons.image),
           ),
           const SizedBox(width: 5),
           Expanded(

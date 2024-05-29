@@ -53,7 +53,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           },
                         ),
                 ),
-                // Input
+                // Input filed
                 Row(
                   children: [
                     Expanded(
