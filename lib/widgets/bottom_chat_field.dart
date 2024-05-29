@@ -8,9 +8,9 @@ class BottomChatField extends StatefulWidget {
 }
 
 class _BottomChatFieldState extends State<BottomChatField> {
-  var textFieldFocus;
-
-  var texteController;
+  // controller for the input field
+  FocusNode textFieldFocus = FocusNode();
+  TextEditingController texteController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
