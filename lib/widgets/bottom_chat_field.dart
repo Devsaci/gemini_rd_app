@@ -11,13 +11,13 @@ class BottomChatField extends StatefulWidget {
 class _BottomChatFieldState extends State<BottomChatField> {
   // controller for the input field
   FocusNode textFieldFocus = FocusNode();
-  TextEditingController texteController = 
+  TextEditingController texteController = TextEditingController();
   @override
   void dispose() {
     textFieldFocus.dispose();
     texteController.dispose();
     super.dispose();
-  } 
+  }
 
   @override
   Widget build(BuildContext context) {
