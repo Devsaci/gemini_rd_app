@@ -8,6 +8,10 @@ class BottomChatField extends StatefulWidget {
 }
 
 class _BottomChatFieldState extends State<BottomChatField> {
+  var textFieldFocus;
+
+  var texteController;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,9 +27,12 @@ class _BottomChatFieldState extends State<BottomChatField> {
             onPressed: () {},
             icon: const Icon(Icons.emoji_emotions),
           ),
-          const Expanded(
+          const SizedBox(width: 5),
+          Expanded(
             child: TextField(
-              decoration: InputDecoration(
+              focusNode: textFieldFocus,
+              controller: texteController,
+              decoration: const InputDecoration(
                 hintText: 'Type a message',
                 border: InputBorder.none,
               ),
