@@ -34,9 +34,11 @@ class _BottomChatFieldState extends State<BottomChatField> {
               controller: texteController,
               textInputAction: TextInputAction.send,
               onSubmitted: (String value) {},
-              decoration: const InputDecoration.collapsed(
+              decoration: InputDecoration.collapsed(
                 hintText: 'Enter  a promt...',
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderSide: BorderSide.none,
+                ),
               ),
             ),
           ),
