@@ -42,9 +42,7 @@ class _ChatScreenState extends State<ChatScreen> {
               children: [
                 Expanded(
                   child: chatProvider.inChatMessages.isEmpty
-                      ? const Center(
-                          child: Text('No messages yet'),
-                        )
+                      ? const Center(child: Text('No messages yet'))
                       : ListView.builder(
                           itemCount: chatProvider.inChatMessages.length,
                           itemBuilder: (context, index) {
