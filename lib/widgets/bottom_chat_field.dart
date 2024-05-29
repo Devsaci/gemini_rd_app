@@ -19,7 +19,14 @@ class _BottomChatFieldState extends State<BottomChatField> {
       ),
       child: Row(
         children: [
-          const Expanded(child: TextField()),
+          const Expanded(
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Type a message',
+                border: InputBorder.none,
+              ),
+            ),
+          ),
           IconButton(
             onPressed: () {},
             icon: const Icon(Icons.image),
