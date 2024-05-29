@@ -11,19 +11,20 @@ import 'package:path_provider/path_provider.dart' as path;
 
 class ChatProvider extends ChangeNotifier {
 // list of messages
-  List<Message> _inChatMessages = [];
+  final List<Message> _inChatMessages = [];
 
   // page controller
   final PageController _pageController = PageController();
 
   // images Xfile list
-  List<XFile>? _imagesFileList = [];
+  // ignore: unused_field
+  final List<XFile> _imagesFileList = [];
 
   // index of the current screen
-  int _currentIndex = 0;
+  final int _currentIndex = 0;
 
   // cuttent chatId
-  String _currentChatId = '';
+  final String _currentChatId = '';
 
   // initialize generative model
   GenerativeModel? _model;
@@ -35,10 +36,10 @@ class ChatProvider extends ChangeNotifier {
   GenerativeModel? _visionModel;
 
   // current mode
-  String _modelType = 'gemini-pro';
+  final String _modelType = 'gemini-pro';
 
   // loading bool
-  bool _isLoading = false;
+  final bool _isLoading = false;
 
   // getters
   List<Message> get inChatMessages => _inChatMessages;

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:gemini_rd_app/providers/chat_provider.dart';
 import 'package:provider/provider.dart';
 
