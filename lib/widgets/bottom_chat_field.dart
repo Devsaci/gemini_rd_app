@@ -38,6 +38,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
                 hintText: 'Enter  a promt...',
                 border: OutlineInputBorder(
                   borderSide: BorderSide.none,
+                  borderRadius: BorderRadius.circular(30),
                 ),
               ),
             ),
