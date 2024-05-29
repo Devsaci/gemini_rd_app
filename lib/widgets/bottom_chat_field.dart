@@ -33,7 +33,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
               focusNode: textFieldFocus,
               controller: texteController,
               textInputAction: TextInputAction.send,
-              onSubmitted: (value) {},
+              onSubmitted: (String value) {},
               decoration: const InputDecoration(
                 hintText: 'Type a message',
                 border: InputBorder.none,
