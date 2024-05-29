@@ -50,10 +50,21 @@ class _BottomChatFieldState extends State<BottomChatField> {
               ),
             ),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.image),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.deepPurple,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            margin: const EdgeInsets.all(5.0),
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Icon(Icons.arrow_upward, color: Colors.white),
+            ),
           ),
+          // IconButton(
+          //   onPressed: () {},
+          //   icon: const Icon(Icons.image),
+          // ),
         ],
       ),
     );
