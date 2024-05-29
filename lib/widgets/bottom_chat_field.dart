@@ -13,7 +13,9 @@ class _BottomChatFieldState extends State<BottomChatField> {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        border: Border.all(),
+        border: Border.all(
+          color: Theme.of(context).textTheme.titleLarge!.color!,
+        ),
       ),
     );
   }
