@@ -19,6 +19,10 @@ class _BottomChatFieldState extends State<BottomChatField> {
       ),
       child: Row(
         children: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.emoji_emotions),
+          ),
           const Expanded(
             child: TextField(
               decoration: InputDecoration(
