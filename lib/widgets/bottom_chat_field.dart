@@ -17,6 +17,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
           color: Theme.of(context).textTheme.titleLarge!.color!,
         ),
       ),
+      child: Row(),
     );
   }
 }
