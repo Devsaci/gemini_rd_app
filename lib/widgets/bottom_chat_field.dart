@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class BottomChatField extends StatefulWidget {
   const BottomChatField({super.key});
@@ -10,7 +11,13 @@ class BottomChatField extends StatefulWidget {
 class _BottomChatFieldState extends State<BottomChatField> {
   // controller for the input field
   FocusNode textFieldFocus = FocusNode();
-  TextEditingController texteController = TextEditingController();
+  TextEditingController texteController = 
+  @override
+  void dispose() {
+    textFieldFocus.dispose();
+    texteController.dispose();
+    super.dispose();
+  } 
 
   @override
   Widget build(BuildContext context) {
