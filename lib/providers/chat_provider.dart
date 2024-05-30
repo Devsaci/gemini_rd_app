@@ -54,10 +54,13 @@ class ChatProvider extends ChangeNotifier {
 
   // SETTERS
 
-  set inChatMessages(List<Message> value) {
-    _inChatMessages = value;
-    notifyListeners();
-  }
+  // set inChatMessages(List<Message> value) {
+  //   _inChatMessages = value;
+  //   notifyListeners();
+  // }
+
+  // set inChatMessages
+  Future<void> setInChatMessages({required String chatId}) async {}
 
   // Init Hive boxe
   static initHive() async {
