@@ -54,7 +54,9 @@ class _ChatScreenState extends State<ChatScreen> {
                           },
                         ),
                 ),
-                const BottomChatField()
+                BottomChatField(
+                  chatProvider: chatProvider,
+                )
                 // // Input filed
                 // Row(
                 //   children: [

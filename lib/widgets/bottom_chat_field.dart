@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:gemini_rd_app/providers/chat_provider.dart';
 
 class BottomChatField extends StatefulWidget {
-  const BottomChatField({super.key});
+  const BottomChatField({
+    super.key,
+    required this.chatProvider,
+  });
+  final ChatProvider chatProvider; // reference to the chat provider
 
   @override
   State<BottomChatField> createState() => _BottomChatFieldState();
@@ -30,7 +35,9 @@ class _BottomChatFieldState extends State<BottomChatField> {
       child: Row(
         children: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              //Pick Image
+            },
             icon: const Icon(Icons.image),
           ),
           const SizedBox(width: 5),
@@ -50,7 +57,9 @@ class _BottomChatFieldState extends State<BottomChatField> {
             ),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              //Send Image
+            },
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.deepPurple,
