@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class BottomChatField extends StatefulWidget {
   const BottomChatField({super.key});
@@ -50,21 +49,20 @@ class _BottomChatFieldState extends State<BottomChatField> {
               ),
             ),
           ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.deepPurple,
-              borderRadius: BorderRadius.circular(20),
-            ),
-            margin: const EdgeInsets.all(5.0),
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Icon(Icons.arrow_upward, color: Colors.white),
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.deepPurple,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              margin: const EdgeInsets.all(5.0),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Icon(Icons.arrow_upward, color: Colors.white),
+              ),
             ),
           ),
-          // IconButton(
-          //   onPressed: () {},
-          //   icon: const Icon(Icons.image),
-          // ),
         ],
       ),
     );
