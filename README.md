@@ -22,4 +22,6 @@ in terminal command  : dart run build_runner build
 
 4.Chat Provider Class
 
-5.BottomChatField
+5.BottomChatField & Chat Provider part 1
+
+6.Chat Provider part 2
