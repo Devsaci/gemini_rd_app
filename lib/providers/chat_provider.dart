@@ -60,7 +60,9 @@ class ChatProvider extends ChangeNotifier {
   // }
 
   // set inChatMessages
-  Future<void> setInChatMessages({required String chatId}) async {}
+  Future<void> setInChatMessages({required String chatId}) async {
+    // get messages from hive database
+  }
 
   // Init Hive boxe
   static initHive() async {
