@@ -11,20 +11,20 @@ import 'package:path_provider/path_provider.dart' as path;
 
 class ChatProvider extends ChangeNotifier {
 // list of messages
-  final List<Message> _inChatMessages = [];
+  List<Message> _inChatMessages = [];
 
   // page controller
-  final PageController _pageController = PageController();
+  PageController _pageController = PageController();
 
   // images Xfile list
-  // ignore: unused_field
-  final List<XFile> _imagesFileList = [];
+
+  List<XFile> _imagesFileList = [];
 
   // index of the current screen
-  final int _currentIndex = 0;
+  int _currentIndex = 0;
 
   // cuttent chatId
-  final String _currentChatId = '';
+  String _currentChatId = '';
 
   // initialize generative model
   GenerativeModel? _model;
@@ -36,10 +36,10 @@ class ChatProvider extends ChangeNotifier {
   GenerativeModel? _visionModel;
 
   // current mode
-  final String _modelType = 'gemini-pro';
+  String _modelType = 'gemini-pro';
 
   // loading bool
-  final bool _isLoading = false;
+  bool _isLoading = false;
 
   // getters
   List<Message> get inChatMessages => _inChatMessages;
@@ -51,6 +51,13 @@ class ChatProvider extends ChangeNotifier {
   GenerativeModel? get visionModel => _visionModel;
   String get modelType => _modelType;
   bool get isLoading => _isLoading;
+
+  // SETTERS
+
+  set inChatMessages(List<Message> value) {
+    _inChatMessages = value;
+    notifyListeners();
+  }
 
   // Init Hive boxe
   static initHive() async {
