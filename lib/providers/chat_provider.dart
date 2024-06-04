@@ -107,6 +107,16 @@ class ChatProvider extends ChangeNotifier {
     return newModel;
   }
 
+  // function to set the model based on bool - isTextOnly
+  Future<void> setModel({required bool isTextOnly}) async {
+    if (isTextOnly) {
+      _model = _textModel;
+    } else {
+      _model = _visionModel;
+    }
+    notifyListeners();
+  }
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
