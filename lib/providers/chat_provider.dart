@@ -63,6 +63,9 @@ class ChatProvider extends ChangeNotifier {
   Future<void> setInChatMessages({required String chatId}) async {
     // get messages from hive database
     final messagesFromDB = await loadMessagesfromDB(chatId: chatId);
+    for (var message in messagesFromDB) {
+      _inChatMessages.add(message);
+    }
   }
 
   // Load the messages from hive
