@@ -68,6 +68,7 @@ class ChatProvider extends ChangeNotifier {
   Future<List<Message>> loadMessagesfromDB({required String chatId}) async {
     // open the box of this chatID
     await Hive.openBox<ChatHistory>('${Constants.chatMessagesBox}$chatId');
+    Hive.box('${Constants.chatMessagesBox}$chatId');
 
     return [];
   }
