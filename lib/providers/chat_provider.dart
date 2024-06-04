@@ -64,7 +64,9 @@ class ChatProvider extends ChangeNotifier {
     // get messages from hive database
     final messagesFromDB = await loadMessagesfromDB(chatId: chatId);
     for (var message in messagesFromDB) {
-      if (_inChatMessages.contains(message)) {}
+      if (_inChatMessages.contains(message)) {
+        continue;
+      }
 
       _inChatMessages.add(message);
     }
