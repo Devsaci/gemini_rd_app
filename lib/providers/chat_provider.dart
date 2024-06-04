@@ -77,7 +77,7 @@ class ChatProvider extends ChangeNotifier {
       return messageData;
     }).toList();
 
-    return [];
+    return newData;
   }
 
   // Init Hive boxe
