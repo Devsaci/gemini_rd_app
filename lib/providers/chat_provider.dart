@@ -94,6 +94,12 @@ class ChatProvider extends ChangeNotifier {
     return newData;
   }
 
+  // set file list
+  void setImagesFileList({required List<XFile> listValue}) {
+    _imagesFileList = listValue;
+    notifyListeners();
+  }
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
