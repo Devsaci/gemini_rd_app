@@ -64,6 +64,14 @@ class ChatProvider extends ChangeNotifier {
     // get messages from hive database
   }
 
+  // Load the messages from hive
+  Future<List<Message>> loadMessagesfromDB({required String chatId}) async {
+    // open the box of this chatID
+    await Hive.openBox<ChatHistory>(chatId);
+
+    return [];
+  }
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
