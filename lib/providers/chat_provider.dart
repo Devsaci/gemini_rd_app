@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:gemini_rd_app/constants.dart';
 import 'package:gemini_rd_app/hive/chat_history.dart';
@@ -65,6 +67,7 @@ class ChatProvider extends ChangeNotifier {
     final messagesFromDB = await loadMessagesfromDB(chatId: chatId);
     for (var message in messagesFromDB) {
       if (_inChatMessages.contains(message)) {
+        log('message already exist');
         continue;
       }
 
