@@ -73,6 +73,8 @@ class ChatProvider extends ChangeNotifier {
 
       _inChatMessages.add(message);
     }
+
+    notifyListeners();
   }
 
   // Load the messages from hive
