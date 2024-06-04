@@ -100,6 +100,13 @@ class ChatProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  // set the current model
+  String setCurrentModel({required String newModel}) {
+    _modelType = modelType;
+    notifyListeners();
+    return newModel;
+  }
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
