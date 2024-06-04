@@ -76,6 +76,7 @@ class ChatProvider extends ChangeNotifier {
       final messageData = Message.fromMap(Map<String, dynamic>.from(message));
       return messageData;
     }).toList();
+    notifyListeners();
 
     return newData;
   }
