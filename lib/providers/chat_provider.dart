@@ -70,6 +70,12 @@ class ChatProvider extends ChangeNotifier {
     await Hive.openBox<ChatHistory>('${Constants.chatMessagesBox}$chatId');
     final messageBox = Hive.box('${Constants.chatMessagesBox}$chatId');
 
+    // get all the messages
+    final newData = messageBox.keys.map((e) {
+      messageBox.get(e);
+      return null;
+    }).toList();
+
     return [];
   }
 
