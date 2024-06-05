@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:gemini_rd_app/api/api_service.dart';
 import 'package:gemini_rd_app/constants.dart';
 import 'package:gemini_rd_app/hive/chat_history.dart';
 import 'package:gemini_rd_app/hive/settings.dart';
@@ -56,11 +57,6 @@ class ChatProvider extends ChangeNotifier {
 
   // SETTERS
 
-  // set inChatMessages(List<Message> value) {
-  //   _inChatMessages = value;
-  //   notifyListeners();
-  // }
-
   // set inChatMessages
   Future<void> setInChatMessages({required String chatId}) async {
     // get messages from hive database
@@ -110,7 +106,11 @@ class ChatProvider extends ChangeNotifier {
   // function to set the model based on bool - isTextOnly
   Future<void> setModel({required bool isTextOnly}) async {
     if (isTextOnly) {
-      _model = _textModel;
+      _model = _textModel ??
+          GenerativeModel(
+            model: setCurrentModel(newModel: 'gemini-pro'),
+            apiKey: ApiService.geminiApiSecret,
+          );
     } else {
       _model = _visionModel;
     }
