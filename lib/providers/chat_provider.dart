@@ -155,9 +155,9 @@ class ChatProvider extends ChangeNotifier {
     final chatId = _currentChatId;
   }
 
-  // String getChatId() {
-  //   return _currentChatId;
-  // }
+  String getChatId() {
+    return _currentChatId;
+  }
 
   // Init Hive boxe
   static initHive() async {
