@@ -173,7 +173,7 @@ class ChatProvider extends ChangeNotifier {
       }
     }
 
-    return List<Content>.of(history);
+    return history;
   }
 
   String getChatId() {
