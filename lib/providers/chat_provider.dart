@@ -164,7 +164,9 @@ class ChatProvider extends ChangeNotifier {
     List<Content> history = [];
     if (currentChatId.isNotEmpty) {
       await setInChatMessages(chatId: chatId);
-      for (var message in inChatMessages) {}
+      for (var message in inChatMessages) {
+        if (message.role == Role.user) {}
+      }
     }
 
     return List<Content>.of(history);
