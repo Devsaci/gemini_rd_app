@@ -112,7 +112,11 @@ class ChatProvider extends ChangeNotifier {
             apiKey: ApiService.geminiApiSecret,
           );
     } else {
-      _model = _visionModel;
+      _model = _visionModel ??
+          GenerativeModel(
+            model: setCurrentModel(newModel: 'gemini-pro-vision'),
+            apiKey: ApiService.geminiApiSecret,
+          );
     }
     notifyListeners();
   }
