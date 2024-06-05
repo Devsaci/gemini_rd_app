@@ -121,6 +121,12 @@ class ChatProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  // set current page index
+  void setCurrentIndex({required int newIndex}) {
+    _currentIndex = newIndex;
+    notifyListeners();
+  }
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
