@@ -156,6 +156,13 @@ class ChatProvider extends ChangeNotifier {
 
     // list of history messages
     List<Content> history = [];
+
+    // get the chat history
+  }
+
+  Future<List<Content>> getHistory({required String chatId}) async {
+    List<Content> history = [];
+    return List<Content>.of(history);
   }
 
   String getChatId() {
