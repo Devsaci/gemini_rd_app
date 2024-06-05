@@ -127,6 +127,12 @@ class ChatProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  // set current chat id
+  void setCurrentChatId({required String newChatId}) {
+    _currentChatId = newChatId;
+    notifyListeners();
+  }
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
