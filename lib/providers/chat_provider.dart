@@ -143,7 +143,10 @@ class ChatProvider extends ChangeNotifier {
   Future<void> sentMessage({
     required String message,
     required bool isTextOnly,
-  }) async {}
+  }) async {
+    // set the model
+    await setModel(isTextOnly: isTextOnly);
+  }
 
   // Init Hive boxe
   static initHive() async {
