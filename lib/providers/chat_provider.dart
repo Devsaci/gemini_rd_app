@@ -167,6 +167,8 @@ class ChatProvider extends ChangeNotifier {
       for (var message in inChatMessages) {
         if (message.role == Role.user) {
           history.add(Content.text(message.message.toString()));
+        } else {
+          history.add(Content.model([TextPart(message.message.toString())]));
         }
       }
     }
