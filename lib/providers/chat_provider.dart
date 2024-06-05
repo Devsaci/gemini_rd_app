@@ -153,6 +153,10 @@ class ChatProvider extends ChangeNotifier {
 
     // get the chatId
     String chatId = getChatId();
+
+     // list of history messages  
+    List<ChatHistory> chatHistoryList = [];
+    if (chatId.isNotEmpty) {
   }
 
   String getChatId() {
