@@ -22,7 +22,7 @@ class ChatProvider extends ChangeNotifier {
 
   // images Xfile list
 
-  List<XFile> _imagesFileList = [];
+  List<XFile>? _imagesFileList = [];
 
   // index of the current screen
   int _currentIndex = 0;
@@ -168,8 +168,12 @@ class ChatProvider extends ChangeNotifier {
     required bool isTextOnly,
   }) {
     List<String> imagesUrls = [];
-
-    return [];
+    // if (!isTextOnly && imagesFileList != null) {
+    //   for (var image in _imagesFileList!) {
+    //     imagesUrls.add(image.path);
+    //   }
+    // }
+    return imagesUrls;
   }
 
   Future<List<Content>> getHistory({required String chatId}) async {
