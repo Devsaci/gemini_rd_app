@@ -164,6 +164,12 @@ class ChatProvider extends ChangeNotifier {
     List<String> imagesUrls = [];
   }
 
+  List<String> getImagesUrls({
+    required bool isTextOnly,
+  }) {
+    return [];
+  }
+
   Future<List<Content>> getHistory({required String chatId}) async {
     List<Content> history = [];
     if (currentChatId.isNotEmpty) {
