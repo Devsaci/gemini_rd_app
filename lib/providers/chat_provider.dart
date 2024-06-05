@@ -152,7 +152,7 @@ class ChatProvider extends ChangeNotifier {
     setLoading(value: true);
 
     // get the chatId
-    final chatId = _currentChatId;
+    String chatId = getChatId();
   }
 
   String getChatId() {
