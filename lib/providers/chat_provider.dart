@@ -139,6 +139,12 @@ class ChatProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+// send message to gemini and get the streamed reposnse
+  Future<void> sentMessage({
+    required String message,
+    required bool isTextOnly,
+  }) async {}
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
