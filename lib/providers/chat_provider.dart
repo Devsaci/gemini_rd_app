@@ -156,6 +156,7 @@ class ChatProvider extends ChangeNotifier {
   }
 
   String getChatId() {
+    if (_currentChatId.isEmpty) {}
     return _currentChatId;
   }
 
