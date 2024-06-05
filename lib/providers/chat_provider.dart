@@ -11,6 +11,7 @@ import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart' as path;
+import 'package:uuid/uuid.dart';
 
 class ChatProvider extends ChangeNotifier {
 // list of messages
@@ -146,7 +147,17 @@ class ChatProvider extends ChangeNotifier {
   }) async {
     // set the model
     await setModel(isTextOnly: isTextOnly);
+
+    // set loading
+    setLoading(value: true);
+
+    // get the chatId
+    final chatId = _currentChatId;
   }
+
+  // String getChatId() {
+  //   return _currentChatId;
+  // }
 
   // Init Hive boxe
   static initHive() async {
