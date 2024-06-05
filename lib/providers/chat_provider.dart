@@ -158,6 +158,8 @@ class ChatProvider extends ChangeNotifier {
   String getChatId() {
     if (_currentChatId.isEmpty) {
       _currentChatId = const Uuid().v4();
+    } else {
+      _currentChatId = _currentChatId;
     }
     return _currentChatId;
   }
