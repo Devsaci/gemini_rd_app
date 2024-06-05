@@ -167,6 +167,8 @@ class ChatProvider extends ChangeNotifier {
   List<String> getImagesUrls({
     required bool isTextOnly,
   }) {
+    List<String> imagesUrls = [];
+
     return [];
   }
 
