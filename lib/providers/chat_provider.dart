@@ -133,6 +133,12 @@ class ChatProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  // set loading
+  void setLoading({required bool value}) {
+    _isLoading = value;
+    notifyListeners();
+  }
+
   // Init Hive boxe
   static initHive() async {
     final dir = await path.getApplicationDocumentsDirectory();
