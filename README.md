@@ -25,3 +25,5 @@ in terminal command  : dart run build_runner build
 5.BottomChatField & Chat Provider part 1
 
 6.Chat Provider part 2
+
+7.Send Message
