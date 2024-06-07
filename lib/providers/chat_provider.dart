@@ -165,7 +165,7 @@ class ChatProvider extends ChangeNotifier {
     history = await getHistory(chatId: chatId);
 
     // get the imagesUrls
-    List<String> imagesUrls = [];
+    List<String> imagesUrls = getImagesUrls(isTextOnly: isTextOnly);
   }
 
   List<String> getImagesUrls({
