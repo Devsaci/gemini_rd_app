@@ -203,7 +203,7 @@ class ChatProvider extends ChangeNotifier {
     required List<Content> history,
   }) async {
 // start the chat session - only send history if its text-only
-    _model!.startChat(
+     final chatSession = _ _model!.startChat(
       history: history.isEmpty || !isTextOnly ? null : history,
     );
   }
