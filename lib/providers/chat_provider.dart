@@ -180,6 +180,9 @@ class ChatProvider extends ChangeNotifier {
     // add this message to the list on inChatMessages
     _inChatMessages.add(userMessage);
     notifyListeners();
+    if (currentChatId.isEmpty) {}
+
+    // END SENDING MESSAGE TO GEMINI
   }
 
   List<String> getImagesUrls({
