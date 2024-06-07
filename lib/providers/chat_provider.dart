@@ -166,6 +166,16 @@ class ChatProvider extends ChangeNotifier {
 
     // get the imagesUrls
     List<String> imagesUrls = getImagesUrls(isTextOnly: isTextOnly);
+
+    // user message
+    final userMessage = Message(
+      messageId: 'userMessageId.toString()',
+      chatId: 'chatId',
+      role: Role.user,
+      message: StringBuffer(Message),
+      imagesUrls: imagesUrls,
+      timeSent: DateTime.now(),
+    );
   }
 
   List<String> getImagesUrls({
