@@ -188,6 +188,7 @@ class ChatProvider extends ChangeNotifier {
       message: message,
       isTextOnly: isTextOnly,
       chatId: chatId,
+      userMessage: userMessage,
     );
 
     // END SENDING MESSAGE TO GEMINI
@@ -198,6 +199,7 @@ class ChatProvider extends ChangeNotifier {
     required String message,
     required String chatId,
     required bool isTextOnly,
+    required Message userMessage,
   }) async {}
 
   List<String> getImagesUrls({
