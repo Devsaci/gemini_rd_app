@@ -183,9 +183,23 @@ class ChatProvider extends ChangeNotifier {
     if (currentChatId.isEmpty) {
       setCurrentChatId(newChatId: chatId)
     }
-
+   // send the message to the model and wait for the response
+    await sendMessageAndWaitForResponse (
+      message: message,
+      isTextOnly: isTextOnly,
+    );
+   
     // END SENDING MESSAGE TO GEMINI
   }
+
+  // send message to the model and wait for the response
+     Future<void> sendMessageAndWaitForResponse({
+      required String message,
+      required bool isTextOnly,
+      }) async {
+       
+     }
+      
 
   List<String> getImagesUrls({
     required bool isTextOnly,
