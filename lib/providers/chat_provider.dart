@@ -208,7 +208,14 @@ class ChatProvider extends ChangeNotifier {
       history: history.isEmpty || !isTextOnly ? null : history,
     );
     // get content
+    await getContent();
   }
+
+  // get content
+  Future<Content> getContent() async {
+    return Content.text('message');
+  }
+  // get images urls
 
   List<String> getImagesUrls({
     required bool isTextOnly,
