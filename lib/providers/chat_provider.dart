@@ -207,6 +207,7 @@ class ChatProvider extends ChangeNotifier {
     final chatSession = _model!.startChat(
       history: history.isEmpty || !isTextOnly ? null : history,
     );
+    // get content
   }
 
   List<String> getImagesUrls({
