@@ -180,7 +180,9 @@ class ChatProvider extends ChangeNotifier {
     // add this message to the list on inChatMessages
     _inChatMessages.add(userMessage);
     notifyListeners();
-    if (currentChatId.isEmpty) {}
+    if (currentChatId.isEmpty) {
+      setCurrentChatId(newChatId: chatId)
+    }
 
     // END SENDING MESSAGE TO GEMINI
   }
