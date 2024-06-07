@@ -189,6 +189,7 @@ class ChatProvider extends ChangeNotifier {
       isTextOnly: isTextOnly,
       chatId: chatId,
       userMessage: userMessage,
+      history: history,
     );
 
     // END SENDING MESSAGE TO GEMINI
@@ -203,7 +204,7 @@ class ChatProvider extends ChangeNotifier {
     required List<Content> history,
   }) async {
 // start the chat session - only send history if its text-only
-     final chatSession = _ _model!.startChat(
+    final chatSession = _model!.startChat(
       history: history.isEmpty || !isTextOnly ? null : history,
     );
   }
