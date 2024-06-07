@@ -23,6 +23,10 @@ class ChatProvider extends ChangeNotifier {
   // images Xfile list
 
   List<XFile>? _imagesFileList = [];
+  List<XFile>? get imagesFileList => _imagesFileList;
+  // List<XFile>? get imagesFileList => this._imagesFileList;
+
+  // set imagesFileList(List<XFile>? value) => this._imagesFileList = value;
 
   // index of the current screen
   int _currentIndex = 0;
@@ -168,11 +172,11 @@ class ChatProvider extends ChangeNotifier {
     required bool isTextOnly,
   }) {
     List<String> imagesUrls = [];
-    // if (!isTextOnly && imagesFileList != null) {
-    //   for (var image in _imagesFileList!) {
-    //     imagesUrls.add(image.path);
-    //   }
-    // }
+    if (!isTextOnly && imagesFileList != null) {
+      for (var image in imagesFileList!) {
+        imagesUrls.add(image.path);
+      }
+    }
     return imagesUrls;
   }
 
