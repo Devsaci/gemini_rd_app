@@ -27,3 +27,5 @@ in terminal command  : dart run build_runner build
 6.Chat Provider part 2
 
 7.Send Message
+
+8.Finalize Sending Text Message
