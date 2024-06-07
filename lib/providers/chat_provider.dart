@@ -176,6 +176,10 @@ class ChatProvider extends ChangeNotifier {
       imagesUrls: imagesUrls,
       timeSent: DateTime.now(),
     );
+
+    // add this message to the list on inChatMessages
+    _inChatMessages.add(userMessage);
+    notifyListeners();
   }
 
   List<String> getImagesUrls({
