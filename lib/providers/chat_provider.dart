@@ -200,7 +200,10 @@ class ChatProvider extends ChangeNotifier {
     required String chatId,
     required bool isTextOnly,
     required Message userMessage,
-  }) async {}
+  }) async {
+// start the chat session - only send history if its text-only
+    _model!.startChat();
+  }
 
   List<String> getImagesUrls({
     required bool isTextOnly,
