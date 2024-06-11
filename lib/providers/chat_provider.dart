@@ -209,7 +209,7 @@ class ChatProvider extends ChangeNotifier {
       history: history.isEmpty || !isTextOnly ? null : history,
     );
     // get content
-    await getContent(
+    final content = await getContent(
       message: message,
       isTextOnly: isTextOnly,
     );
