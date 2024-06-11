@@ -215,7 +215,9 @@ class ChatProvider extends ChangeNotifier {
     );
 
     // assistant message
-    final assistantMessage = userMessage.copyWith();
+    final assistantMessage = userMessage.copyWith(
+      messageId: 'assistantMessageId.toString()',
+    );
   }
 
   // get content
