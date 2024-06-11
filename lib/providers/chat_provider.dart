@@ -227,6 +227,9 @@ class ChatProvider extends ChangeNotifier {
       final imageFutures = _imagesFileList
           ?.map((imageFile) => imageFile.readAsBytes())
           .toList(growable: false);
+
+      final imageBytes = await Future.wait(imageFutures!);
+
       return Content.text('message');
     }
   }
