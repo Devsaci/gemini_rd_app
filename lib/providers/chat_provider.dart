@@ -224,7 +224,7 @@ class ChatProvider extends ChangeNotifier {
       return Content.text(message);
     } else {
       // generate image from text and image input
-      _imagesFileList?.map((e) => null);
+      _imagesFileList?.map((imageFile) => imageFile.readAsBytes()).toList();
       return Content.text('message');
     }
   }
