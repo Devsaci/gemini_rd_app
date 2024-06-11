@@ -23,6 +23,10 @@ class _BottomChatFieldState extends State<BottomChatField> {
     super.dispose();
   }
 
+  Future<void> sendChatMessage() async {
+    // send the chat message
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
