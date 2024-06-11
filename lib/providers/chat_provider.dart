@@ -213,6 +213,9 @@ class ChatProvider extends ChangeNotifier {
       message: message,
       isTextOnly: isTextOnly,
     );
+
+    // assistant message
+    final assistantMessage = userMessage.copyWith();
   }
 
   // get content
