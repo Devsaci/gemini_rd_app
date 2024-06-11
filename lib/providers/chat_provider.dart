@@ -219,6 +219,7 @@ class ChatProvider extends ChangeNotifier {
       messageId: 'assistantMessageId.toString()',
       role: Role.assistant,
       message: StringBuffer(),
+      timeSent: DateTime.now(),
     )
   }
 
