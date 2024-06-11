@@ -223,6 +223,8 @@ class ChatProvider extends ChangeNotifier {
       // generate text from text-only input
       return Content.text(message);
     } else {
+      // generate image from text and image input
+      _imagesFileList?.map((e) => null);
       return Content.text('message');
     }
   }
