@@ -219,7 +219,12 @@ class ChatProvider extends ChangeNotifier {
     required String message,
     required bool isTextOnly,
   }) async {
-    return Content.text('message');
+    if (isTextOnly) {
+      // generate text from text-only input
+      return Content.text(message);
+    } else {}
+
+    // return Content.text('message');
   }
   // get images urls
 
