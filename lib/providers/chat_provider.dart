@@ -222,9 +222,9 @@ class ChatProvider extends ChangeNotifier {
     if (isTextOnly) {
       // generate text from text-only input
       return Content.text(message);
-    } else {}
-
-    // return Content.text('message');
+    } else {
+      return Content.text('message');
+    }
   }
   // get images urls
 
