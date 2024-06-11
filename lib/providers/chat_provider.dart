@@ -224,6 +224,35 @@ class ChatProvider extends ChangeNotifier {
     // add this message to the list on inChatMessages
     _inChatMessages.add(assistantMessage);
     notifyListeners();
+
+    // wait for stream response
+    chatSession.sendMessageStream(content).asyncMap((event) {
+      return event;
+    }).listen((event) {
+      _inChatMessages
+          .firstWhere((element) =>
+              element.messageId == assistantMessage.messageId &&
+              element.role.name == Role.assistant.name)
+          .message
+          .write(event.text);
+      log('event: ${event.text}');
+      notifyListeners();
+    }, onDone: () async {
+      log('stream done');
+      // save message to hive db
+      // await saveMessagesToDB(
+      //   chatID: chatId,
+      //   userMessage: userMessage,
+      //   assistantMessage: assistantMessage,
+      //   messagesBox: messagesBox,
+      // );
+      // set loading to false
+      setLoading(value: false);
+    }).onError((erro, stackTrace) {
+      log('error: $erro');
+      // set loading
+      setLoading(value: false);
+    });
   }
 
   // get content
