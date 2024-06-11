@@ -223,6 +223,7 @@ class ChatProvider extends ChangeNotifier {
     );
     // add this message to the list on inChatMessages
     _inChatMessages.add(assistantMessage);
+    notifyListeners();
   }
 
   // get content
