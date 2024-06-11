@@ -235,7 +235,7 @@ class ChatProvider extends ChangeNotifier {
           .map((bytes) => DataPart('image/jpeg', Uint8List.fromList(bytes)))
           .toList();
 
-      return Content.text('message');
+      return Content.multi([prompt, ...imageParts]);
     }
   }
   // get images urls
