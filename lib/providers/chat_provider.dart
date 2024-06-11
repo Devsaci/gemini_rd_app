@@ -170,7 +170,7 @@ class ChatProvider extends ChangeNotifier {
 
     // user message
     final userMessage = Message(
-      messageId: 'userMessageId.toString()',
+      messageId: '',
       chatId: 'chatId',
       role: Role.user,
       message: StringBuffer(Message),
