@@ -221,6 +221,8 @@ class ChatProvider extends ChangeNotifier {
       message: StringBuffer(),
       timeSent: DateTime.now(),
     );
+    // add this message to the list on inChatMessages
+    _inChatMessages.add(assistantMessage);
   }
 
   // get content
