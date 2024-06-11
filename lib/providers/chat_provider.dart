@@ -217,6 +217,7 @@ class ChatProvider extends ChangeNotifier {
     // assistant message
     final assistantMessage = userMessage.copyWith(
       messageId: 'assistantMessageId.toString()',
+      role: Role.assistant,
     );
   }
 
