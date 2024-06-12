@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:gemini_rd_app/providers/chat_provider.dart';
 
@@ -28,14 +30,14 @@ class _BottomChatFieldState extends State<BottomChatField> {
     required ChatProvider chatProvider,
     required bool isTextOnly,
   }) async {
-    // send the chat message
-    await chatProvider.sentMessage(
-      message: message,
-      isTextOnly: isTextOnly,
-    );
-
-    try {} catch (e) {
-      print(e);
+    try {
+      // send the chat message
+      await chatProvider.sentMessage(
+        message: message,
+        isTextOnly: isTextOnly,
+      );
+    } catch (e) {
+      log('error : $e');
     } finally {}
   }
 
