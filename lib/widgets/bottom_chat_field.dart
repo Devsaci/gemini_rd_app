@@ -80,6 +80,14 @@ class _BottomChatFieldState extends State<BottomChatField> {
           ),
           GestureDetector(
             onTap: () {
+              if (textController.text.isNotEmpty) {
+                //Send Image
+                sendChatMessage(
+                  message: textController.text,
+                  chatProvider: widget.chatProvider,
+                  isTextOnly: true,
+                );
+              }
               //Send Image
               sendChatMessage(
                 message: textController.text,
