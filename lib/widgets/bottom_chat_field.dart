@@ -68,7 +68,16 @@ class _BottomChatFieldState extends State<BottomChatField> {
               focusNode: textFieldFocus,
               controller: textController,
               textInputAction: TextInputAction.send,
-              onSubmitted: (String value) {},
+              onSubmitted: (String value) {
+                if (value.isNotEmpty) {
+                  //Send Image
+                  sendChatMessage(
+                    message: textController.text,
+                    chatProvider: widget.chatProvider,
+                    isTextOnly: true,
+                  );
+                }
+              },
               decoration: InputDecoration.collapsed(
                 hintText: 'Enter  a promt...',
                 border: OutlineInputBorder(
