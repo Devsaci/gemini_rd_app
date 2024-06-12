@@ -84,7 +84,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
               sendChatMessage(
                 message: textController.text,
                 chatProvider: widget.chatProvider,
-                isTextOnly: false,
+                isTextOnly: true,
               );
             },
             child: Container(
