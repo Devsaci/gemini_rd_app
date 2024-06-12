@@ -17,11 +17,12 @@ class BottomChatField extends StatefulWidget {
 class _BottomChatFieldState extends State<BottomChatField> {
   // controller for the input field
   FocusNode textFieldFocus = FocusNode();
-  TextEditingController texteController = TextEditingController();
+  // controller for the input field
+  final TextEditingController textController = TextEditingController();
   @override
   void dispose() {
     textFieldFocus.dispose();
-    texteController.dispose();
+    textController.dispose();
     super.dispose();
   }
 
@@ -38,7 +39,9 @@ class _BottomChatFieldState extends State<BottomChatField> {
       );
     } catch (e) {
       log('error : $e');
-    } finally {}
+    } finally {
+      textController.clear();
+    }
   }
 
   @override
@@ -62,7 +65,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
           Expanded(
             child: TextField(
               focusNode: textFieldFocus,
-              controller: texteController,
+              controller: textController,
               textInputAction: TextInputAction.send,
               onSubmitted: (String value) {},
               decoration: InputDecoration.collapsed(
