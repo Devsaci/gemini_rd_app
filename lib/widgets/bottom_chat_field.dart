@@ -33,6 +33,10 @@ class _BottomChatFieldState extends State<BottomChatField> {
       message: message,
       isTextOnly: isTextOnly,
     );
+
+    try {} catch (e) {
+      print(e);
+    } finally {}
   }
 
   @override
