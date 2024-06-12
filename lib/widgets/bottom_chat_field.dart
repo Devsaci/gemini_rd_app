@@ -23,7 +23,9 @@ class _BottomChatFieldState extends State<BottomChatField> {
     super.dispose();
   }
 
-  Future<void> sendChatMessage() async {
+  Future<void> sendChatMessage({
+    required String message,
+  }) async {
     // send the chat message
   }
 
