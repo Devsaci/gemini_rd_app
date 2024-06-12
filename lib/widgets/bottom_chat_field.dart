@@ -26,6 +26,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
   Future<void> sendChatMessage({
     required String message,
     required ChatProvider chatProvider,
+    required bool isTextOnly,
   }) async {
     // send the chat message
   }
