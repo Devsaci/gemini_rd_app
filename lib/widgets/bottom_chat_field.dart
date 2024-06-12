@@ -15,7 +15,7 @@ class BottomChatField extends StatefulWidget {
 }
 
 class _BottomChatFieldState extends State<BottomChatField> {
-  // controller for the input field
+  // focus node for the input field
   FocusNode textFieldFocus = FocusNode();
   // controller for the input field
   final TextEditingController textController = TextEditingController();
@@ -81,6 +81,11 @@ class _BottomChatFieldState extends State<BottomChatField> {
           GestureDetector(
             onTap: () {
               //Send Image
+              sendChatMessage(
+                message: textController.text,
+                chatProvider: widget.chatProvider,
+                isTextOnly: false,
+              );
             },
             child: Container(
               decoration: BoxDecoration(
