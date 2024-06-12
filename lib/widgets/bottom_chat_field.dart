@@ -41,6 +41,7 @@ class _BottomChatFieldState extends State<BottomChatField> {
       log('error : $e');
     } finally {
       textController.clear();
+      textFieldFocus.unfocus();
     }
   }
 
