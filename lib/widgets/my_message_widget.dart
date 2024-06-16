@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gemini_rd_app/models/message.dart';
 
 class MyMessageWidget extends StatelessWidget {
@@ -10,8 +11,9 @@ class MyMessageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Align(
+    return Align(
       alignment: Alignment.centerRight,
+      child: Container(),
     );
   }
 }
