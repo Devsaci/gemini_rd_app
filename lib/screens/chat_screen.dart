@@ -57,25 +57,6 @@ class _ChatScreenState extends State<ChatScreen> {
                 BottomChatField(
                   chatProvider: chatProvider,
                 )
-                // // Input filed
-                // Row(
-                //   children: [
-                //     Expanded(
-                //       child: TextField(
-                //         controller: _messageController,
-                //         decoration: const InputDecoration(
-                //           hintText: 'Enter message',
-                //         ),
-                //       ),
-                //     ),
-                //     IconButton(
-                //       icon: const Icon(Icons.send),
-                //       onPressed: () {
-                //         //chatProvider.sendMessage();
-                //       },
-                //     ),
-                //   ],
-                // ),
               ],
             ),
           ),
