@@ -29,3 +29,5 @@ in terminal command  : dart run build_runner build
 7.Send Message
 
 8.Finalize Sending Text Message
+
+9.Message Widget and Scroll Controller
