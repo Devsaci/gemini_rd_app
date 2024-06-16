@@ -15,7 +15,7 @@ Gemini Models: Master both Gemini-Pro and Gemini-Pro-Vision for advanced AI inte
 Generate Your API Key: Learn the process for obtaining a Google API key for Gemini access.
 
 <https://github.com/Devsaci/gemini_rd_app.git>
-<https://github.com/Dexterfury/flutter_gemini/blob/main/pubspec.yaml>
+https://github.com/Dexterfury/flutter_gemini
 
 3.Home screen UI and Hive boxes
 in terminal command  : dart run build_runner build
