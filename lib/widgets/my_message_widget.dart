@@ -23,6 +23,7 @@ class MyMessageWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(18),
         ),
         padding: const EdgeInsets.all(15),
+        margin: const EdgeInsets.only(bottom: 8),
       ),
     );
   }
