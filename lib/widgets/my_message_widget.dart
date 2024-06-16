@@ -19,7 +19,7 @@ class MyMessageWidget extends StatelessWidget {
           maxWidth: MediaQuery.of(context).size.width * 0.7,
         ),
         decoration: BoxDecoration(
-          color: Theme.of(context).primaryColor,
+          color: Theme.of(context).colorScheme.primaryContainer,
         ),
       ),
     );
