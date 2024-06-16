@@ -22,6 +22,7 @@ class MyMessageWidget extends StatelessWidget {
           color: Theme.of(context).colorScheme.primaryContainer,
           borderRadius: BorderRadius.circular(18),
         ),
+        padding: const EdgeInsets.all(15),
       ),
     );
   }
