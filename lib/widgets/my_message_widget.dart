@@ -20,6 +20,7 @@ class MyMessageWidget extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.primaryContainer,
+          borderRadius: BorderRadius.circular(18),
         ),
       ),
     );
