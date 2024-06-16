@@ -27,7 +27,7 @@ class MyMessageWidget extends StatelessWidget {
           margin: const EdgeInsets.only(bottom: 8),
           child: MarkdownBody(
             selectable: true,
-            data: '',
+            data: message.message.toString(),
           )),
     );
   }
