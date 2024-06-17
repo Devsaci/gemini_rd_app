@@ -12,7 +12,10 @@ class AssistantMessageWidget extends StatelessWidget {
         constraints: BoxConstraints(
           maxWidth: MediaQuery.of(context).size.width * 0.9,
         ),
-        decoration: BoxDecoration(),
+        decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.surfaceVariant,
+          borderRadius: BorderRadius.circular(18),
+        ),
       ),
     );
   }
