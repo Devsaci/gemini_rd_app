@@ -6,8 +6,13 @@ class AssistantMessageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Align(
+    return Align(
       alignment: Alignment.centerLeft,
+      child: Container(
+        constraints: BoxConstraints(
+          maxWidth: MediaQuery.of(context).size.width * 0.9,
+        ),
+      ),
     );
   }
 }
